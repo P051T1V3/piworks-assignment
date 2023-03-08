@@ -1,0 +1,4 @@
+UPDATE daily_vaccination_stats
+SET daily_vaccinations = (SELECT NVL(MEDIAN(daily_vaccinations),0) 
+FROM daily_vaccination_stats AS a 
+WHERE a.country = daily_vaccination_stats.country) WHERE daily_vaccinations IS NULL;
