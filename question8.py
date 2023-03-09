@@ -1,10 +1,6 @@
 from re import findall
 import pandas as pd
 
-"""
-SELECT SUBSTR(Stats_Access_Link,INSTR('://',Stats_Access_Link)+3,INSTR('</',Stats_Access_Link)-INSTR('://',Stats_Access_Link)-3)
-FROM DB;
-"""
 
 def main():
     filename = "example.xlsx"
